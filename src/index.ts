@@ -16,3 +16,16 @@ export type { BarChartProps, BarChartSeries } from './components/BarChart';
 
 export { default as DonutChart } from './components/DonutChart';
 export type { DonutChartProps, DonutChartSlice } from './components/DonutChart';
+
+export { default as KpiStatsCard } from './components/KpiStatsCard';
+export type {
+  KpiStatsCardProps,
+  KpiStatusColor,
+} from './components/KpiStatsCard';
+
+export { default as ActivityFeed } from './components/ActivityFeed';
+export type {
+  ActivityFeedProps,
+  ActivityFeedItem,
+} from './components/ActivityFeed';
+export { formatRelativeTime } from './components/ActivityFeed';

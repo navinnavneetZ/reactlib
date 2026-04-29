@@ -10,3 +10,9 @@ export type {
   ScatterChartSeries,
   ScatterChartPoint,
 } from './components/ScatterChart';
+
+export { default as BarChart } from './components/BarChart';
+export type { BarChartProps, BarChartSeries } from './components/BarChart';
+
+export { default as DonutChart } from './components/DonutChart';
+export type { DonutChartProps, DonutChartSlice } from './components/DonutChart';

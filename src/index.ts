@@ -32,3 +32,6 @@ export { formatRelativeTime } from './components/ActivityFeed';
 
 export { default as DataTable } from './components/DataTable';
 export type { DataTableProps, DataTableColumn } from './components/DataTable';
+
+export { default as GeoPoints } from './components/GeoPoints';
+export type { GeoPointsProps, GeoPoint } from './components/GeoPoints';

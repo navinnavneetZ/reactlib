@@ -62,6 +62,7 @@
   },
   "dependencies": {
     "@mui/x-charts": "^7.29.1",
+    "@mui/x-data-grid": "^6.20.4",
     "storybook": "^8.6.18"
   }
 }

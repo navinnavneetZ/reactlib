@@ -29,3 +29,6 @@ export type {
   ActivityFeedItem,
 } from './components/ActivityFeed';
 export { formatRelativeTime } from './components/ActivityFeed';
+
+export { default as DataTable } from './components/DataTable';
+export type { DataTableProps, DataTableColumn } from './components/DataTable';

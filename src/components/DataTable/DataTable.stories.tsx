@@ -46,6 +46,8 @@ const meta: Meta<typeof DataTable<FacilityRow>> = {
   component: DataTable,
   tags: ['autodocs'],
   argTypes: {
+    rows: { table: { disable: true }, control: false },
+    columns: { table: { disable: true }, control: false },
     loading: { control: 'boolean' },
     density: { control: 'radio', options: ['compact', 'standard', 'comfortable'] },
     pageSize: { control: { type: 'number', min: 5, max: 100, step: 5 } },
@@ -53,6 +55,13 @@ const meta: Meta<typeof DataTable<FacilityRow>> = {
     checkboxSelection: { control: 'boolean' },
     disablePagination: { control: 'boolean' },
   },
+  render: (args) => (
+    <DataTable
+      {...args}
+      rows={args.rows ?? facilityRows}
+      columns={args.columns ?? facilityColumns}
+    />
+  ),
 };
 
 export default meta;
@@ -60,16 +69,12 @@ type Story = StoryObj<typeof DataTable<FacilityRow>>;
 
 export const Basic: Story = {
   args: {
-    rows: facilityRows,
-    columns: facilityColumns,
     height: 500,
   },
 };
 
 export const SortedByOccupancy: Story = {
   args: {
-    rows: facilityRows,
-    columns: facilityColumns,
     initialSort: [{ field: 'occupancy', sort: 'desc' }],
     height: 500,
   },
@@ -77,8 +82,6 @@ export const SortedByOccupancy: Story = {
 
 export const Compact: Story = {
   args: {
-    rows: facilityRows,
-    columns: facilityColumns,
     density: 'compact',
     height: 400,
   },
@@ -86,8 +89,6 @@ export const Compact: Story = {
 
 export const WithSelection: Story = {
   args: {
-    rows: facilityRows,
-    columns: facilityColumns,
     checkboxSelection: true,
     height: 500,
   },
@@ -95,26 +96,25 @@ export const WithSelection: Story = {
 
 export const NoPagination: Story = {
   args: {
-    rows: facilityRows.slice(0, 5),
-    columns: facilityColumns,
     disablePagination: true,
     height: 350,
   },
+  render: (args) => (
+    <DataTable {...args} rows={facilityRows.slice(0, 5)} columns={facilityColumns} />
+  ),
 };
 
 export const Loading: Story = {
   args: {
-    rows: [],
-    columns: facilityColumns,
     loading: true,
     height: 400,
   },
+  render: (args) => <DataTable {...args} rows={[]} columns={facilityColumns} />,
 };
 
 export const Empty: Story = {
   args: {
-    rows: [],
-    columns: facilityColumns,
     height: 300,
   },
+  render: (args) => <DataTable {...args} rows={[]} columns={facilityColumns} />,
 };

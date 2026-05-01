@@ -10,7 +10,7 @@ const facilities: GeoPoint[] = [
   { id: 6, lat: 22.5726, lng: 88.3639, label: 'North Central — Kolkata', description: '380 beds · 95% occupancy' },
   { id: 7, lat: 17.385, lng: 78.4867, label: 'Riverside Care — Hyderabad', description: '150 beds · 58% occupancy' },
   { id: 8, lat: 23.0225, lng: 72.5714, label: 'Eastpoint — Ahmedabad', description: '280 beds · 80% occupancy' },
-  {id:  9, lat: 20.3,   lng: 85.82, label: 'Eastpoint — Bhubaneswar', description: '280 beds · 80% occupancy'}
+  { id:  9, lat: 20.3,   lng: 85.82, label: 'Eastpoint — Bhubaneswar', description: '280 beds · 80% occupancy'},
 ];
 
 const meta: Meta<typeof GeoPoints> = {

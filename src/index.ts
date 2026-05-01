@@ -35,3 +35,6 @@ export type { DataTableProps, DataTableColumn } from './components/DataTable';
 
 export { default as GeoPoints } from './components/GeoPoints';
 export type { GeoPointsProps, GeoPoint } from './components/GeoPoints';
+
+export { default as AreaChart } from './components/AreaChart';
+export type { AreaChartProps, AreaChartSeries } from './components/AreaChart';

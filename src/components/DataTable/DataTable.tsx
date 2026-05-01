@@ -30,7 +30,7 @@ const DataTable = <R extends { id: string | number }>({
   columns,
   loading = false,
   pageSize = 10,
-  pageSizeOptions = [5, 10, 25, 50],
+  pageSizeOptions = [5, 10, 25,30,50],
   initialSort,
   height = 400,
   density = 'standard',
